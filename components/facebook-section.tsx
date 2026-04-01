@@ -64,7 +64,7 @@ export default function FacebookSection({ dict, locale }: FacebookSectionProps) 
                 {dict.title}
               </div>
               <h2
-                className="text-5xl md:text-7xl font-light text-[#213764] leading-[1.1] mb-8"
+                className="text-4xl md:text-7xl font-light text-[#213764] leading-[1.1] mb-8"
                 style={{ fontFamily: 'var(--font-cormorant), Georgia, serif' }}
               >
                 {dict.heading} <br />
@@ -125,10 +125,10 @@ export default function FacebookSection({ dict, locale }: FacebookSectionProps) 
                 <div className="relative bg-white p-3 rounded-[2.2rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden">
                     <div 
                         ref={fbContainerRef}
-                        className="fb-page w-full min-w-[320px] sm:min-w-[400px] md:min-w-[500px] rounded-2xl overflow-hidden"
+                        className="fb-page w-full rounded-2xl overflow-hidden"
                         data-href="https://www.facebook.com/KompleksGradina/"
                         data-tabs="timeline"
-                        data-width="500"
+                        data-width="400"
                         data-height="800"
                         data-small-header="false"
                         data-adapt-container-width="true"

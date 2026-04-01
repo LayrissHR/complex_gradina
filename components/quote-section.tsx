@@ -22,7 +22,7 @@ export default function QuoteSection({ dict }: QuoteSectionProps) {
         
         <blockquote className="relative">
           <p 
-            className="text-3xl md:text-4xl lg:text-5xl text-[#213764] font-light italic leading-tight text-balance mb-10"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#213764] font-light italic leading-tight text-balance mb-10"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
             {dict.text}

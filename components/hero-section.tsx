@@ -54,7 +54,7 @@ export default function HeroSection({ dict }: HeroSectionProps) {
             {dict.location}
           </p>
           <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-tight text-balance"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-tight text-balance"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
             {dict.title_part1}
