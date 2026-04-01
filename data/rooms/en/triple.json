@@ -1,0 +1,10 @@
+{
+  "title": "Triple Room",
+  "description": "Our three triple rooms are ideal for families with a child or friends. They can also be used as double rooms. Each room features a balcony, air conditioning, refrigerator, TV, private bathroom, and free WiFi. Guests utilize free public parking in front of the complex.",
+  "capacity": 3,
+  "price": 45,
+  "price_june_sept": 45,
+  "price_july_aug": 50,
+  "image": "/images/Double_room_2.jpg",
+  "gallery": ["/images/Double_room_2.jpg", "/images/Bathroom_2.JPG"]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Голям апартамент (до 6 души)",
+  "description": "Нашият най-голям апартамент е перфектен за големи семейства или компании до 6 души. Предлага изключителна морска панорама от терасата. Оборудван с климатик, хладилник, телевизор, собствен санитарен възел и WiFi. Гостите ползват безплатен собствен паркинг вътре в комплекса.",
+  "capacity": 6,
+  "price": 100,
+  "price_june_sept": 100,
+  "price_july_aug": 120,
+  "image": "/images/Apartment_2.JPG",
+  "gallery": ["/images/Apartment_2.JPG", "/images/Apartment_5.jpg", "/images/bedroom_in_apartment.jpg", "/images/terrace_apartment_2.jpg"]
+}

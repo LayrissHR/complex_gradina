@@ -1,0 +1,10 @@
+{
+  "title": "Large Apartment (Up to 6 guests)",
+  "description": "Our largest apartment is perfect for large families or groups of up to 6 people. It offers an exceptional sea panorama from the terrace. Equipped with air conditioning, refrigerator, TV, private bathroom, and WiFi. Guests enjoy free private parking inside the complex.",
+  "capacity": 6,
+  "price": 100,
+  "price_june_sept": 100,
+  "price_july_aug": 120,
+  "image": "/images/Apartment_2.JPG",
+  "gallery": ["/images/Apartment_2.JPG", "/images/Apartment_5.jpg", "/images/bedroom_in_apartment.jpg", "/images/terrace_apartment_2.jpg"]
+}

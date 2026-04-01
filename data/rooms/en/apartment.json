@@ -1,0 +1,10 @@
+{
+  "title": "Apartment (Up to 4 guests)",
+  "description": "We offer 6 apartments, each featuring a panoramic sea view. They include a separate bedroom, living room, and terrace. Equipped with air conditioning, refrigerator, TV, private bathroom, and WiFi. Apartment guests enjoy free private parking inside the complex.",
+  "capacity": 4,
+  "price": 80,
+  "price_june_sept": 80,
+  "price_july_aug": 90,
+  "image": "/images/Apartment_1.JPG",
+  "gallery": ["/images/Apartment_1.JPG", "/images/Apartment_3.jpg", "/images/Apartment_4.jpg", "/images/Bathroom_3.jpg", "/images/terrace_apartment_1.jpg"]
+}

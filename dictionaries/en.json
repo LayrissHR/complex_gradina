@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "location": "Chernomorets, Bulgaria",
+    "title_part1": "Complex \"Gradina\"",
+    "title_part2": "Chernomorets",
+    "subtitle": "Your seaside sanctuary — fresh air, crystal water and an unforgettable holiday!",
+    "cta_phone": "Call us",
+    "cta_messenger": "Messenger"
+  },
+  "nav": {
+    "home": "Home",
+    "accommodation": "Rooms",
+    "gallery": "Gallery",
+    "prices": "Prices",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Us",
+    "heading": "Discover the beauty of the",
+    "accent": "Black Sea",
+    "p1": "Complex 'Gradina, Chernomorets' is a family gem located in the heart of the resort village, just a step away from the sandy beach. Our mission is to provide you with a peaceful and cozy environment for your seaside vacation.",
+    "p2": "The complex features an outdoor pool with sunbeds, a cozy indoor pool bar, and modernly furnished rooms and apartments. Here you will find everything you need – from air-conditioned rooms to a special touch for every guest.",
+    "cta": "Contact Us"
+  },
+  "amenities": {
+    "title": "Amenities",
+    "heading": "Everything for the",
+    "accent": "perfect holiday",
+    "items": [
+      { "title": "Outdoor Pool", "desc": "Clean water and sun all day for our guests" },
+      { "title": "Indoor Pool Bar", "desc": "Cooling drinks and a cozy atmosphere" },
+      { "title": "Sea View", "desc": "Panoramic views (available in apartments only)" },
+      { "title": "Parking", "desc": "Private parking (for apartments) and free parking for rooms" },
+      { "title": "Sunbeds", "desc": "Free use of sunbeds around the pool" },
+      { "title": "Fully Equipped", "desc": "AC, Refrigerator, TV, and WiFi in every unit" }
+    ]
+  },
+  "location": {
+    "title": "Find Us",
+    "heading": "Our",
+    "accent": "Location",
+    "address_label": "Address",
+    "distances_label": "Distances",
+    "beach": "To the beach",
+    "center": "To the center",
+    "sozopol": "To Sozopol",
+    "airport": "To Burgas Airport",
+    "cta": "Open in Google Maps"
+  },
+  "footer": {
+    "about_title": "Gradina Chernomorets",
+    "about_text": "A charming hotel on the Bulgarian Black Sea coast. Experience peaceful moments, fresh sea air, and warm hospitality.",
+    "links_title": "Quick Links",
+    "contact_title": "Contact",
+    "rights": "All rights reserved."
+  },
+  "gallery": {
+    "title": "Photos",
+    "heading": "Gallery",
+    "subheading": "Explore our hotel, rooms, and the beautiful sea nature around us."
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Get in",
+    "accent": "touch",
+    "subheading": "Have questions? We are here to help you plan the perfect holiday.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "99, 9-ti Septemvri Str., Chernomorets",
+    "cta": "Send Message"
+  },
+  "facebook": {
+    "title": "Follow Us",
+    "heading": "Stay",
+    "accent": "Connected",
+    "subheading": "Follow our Facebook page for the latest updates, offers, and beautiful sea moments."
+  },
+  "quote": {
+    "text": "“The sea is always the same and never the same. That is its magic. Such is human life — not a single day is repeated, not a single moment.”",
+    "author": "— Stefan Tsanev"
+  }
+}

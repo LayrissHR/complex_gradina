@@ -1,0 +1,10 @@
+{
+  "title": "Большие апартаменты (до 6 человек)",
+  "description": "Наш самый большой номер идеально подходит для больших семей или компаний до 6 человек. Предлагает исключительную морскую панораму с террасы. Оснащен кондиционером, холодильником, телевизором, собственной ванной комнатой и WiFi. Гости пользуются бесплатной частной парковкой внутри комплекса.",
+  "capacity": 6,
+  "price": 100,
+  "price_june_sept": 100,
+  "price_july_aug": 120,
+  "image": "/images/Apartment_2.JPG",
+  "gallery": ["/images/Apartment_2.JPG", "/images/Apartment_5.jpg", "/images/bedroom_in_apartment.jpg", "/images/terrace_apartment_2.jpg"]
+}

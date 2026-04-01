@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Hotel Brand Colors */
+  --ocean: #05B2DC;
+  --navy: #213764;
+  --sand: #FAFAFB;
+  --blush: #F9DFFF;
+  --coral: #F4A261;
+
+  /* Semantic Tokens */
+  --background: #FAFAFB;
+  --foreground: #1a2a3a;
+  --card: #ffffff;
+  --card-foreground: #1a2a3a;
+  --popover: #ffffff;
+  --popover-foreground: #1a2a3a;
+  --primary: #213764;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f8fc;
+  --secondary-foreground: #213764;
+  --muted: #f0f4f8;
+  --muted-foreground: #5a7a9a;
+  --accent: #05B2DC;
+  --accent-foreground: #ffffff;
+  --cta: #F4A261;
+  --cta-foreground: #ffffff;
+  --highlight: #F9DFFF;
+  --highlight-foreground: #213764;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #e2eaf2;
+  --input: #e2eaf2;
+  --ring: #05B2DC;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --font-sans: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Inter', 'sans-serif';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ocean: #05B2DC;
+  --color-navy: #213764;
+  --color-sand: #FAFAFB;
+  --color-coral: #F4A261;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Wave SVG decoration */
+.wave-divider {
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}

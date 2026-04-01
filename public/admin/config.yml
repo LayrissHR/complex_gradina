@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+i18n:
+  structure: multiple_folders
+  locales: [bg, en, ru]
+  default_locale: bg
+
+collections:
+  - name: "settings"
+    label: "Global Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "data/settings/general.json"
+        i18n: true
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string", i18n: true }
+          - { label: "Contact Phone", name: "phone", widget: "string", i18n: true }
+          - { label: "Contact Email", name: "email", widget: "string", i18n: true }
+          - { label: "Viber Number", name: "viber", widget: "string", i18n: true }
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string", i18n: true }
+
+  - name: "rooms"
+    label: "Rooms & Apartments"
+    folder: "data/rooms"
+    create: true
+    i18n: true
+    slug: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Description", name: "description", widget: "text", i18n: true }
+      - { label: "Capacity (Guests)", name: "capacity", widget: "number" }
+      - { label: "Base Price (BGN)", name: "price", widget: "number" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Gallery", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } }

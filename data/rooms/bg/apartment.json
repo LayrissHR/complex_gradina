@@ -1,0 +1,10 @@
+{
+  "title": "Апартамент (до 4 души)",
+  "description": "Разполагаме с 6 апартамента, всеки от които предлага панорамна гледка към морето. Включват отделна спалня, хол и тераса. Оборудвани са с климатик, хладилник, телевизор, собствен санитарен възел и WiFi. Гостите на апартаментите ползват безплатен собствен паркинг вътре в комплекса.",
+  "capacity": 4,
+  "price": 80,
+  "price_june_sept": 80,
+  "price_july_aug": 90,
+  "image": "/images/Apartment_1.JPG",
+  "gallery": ["/images/Apartment_1.JPG", "/images/Apartment_3.jpg", "/images/Apartment_4.jpg", "/images/Bathroom_3.jpg", "/images/terrace_apartment_1.jpg"]
+}

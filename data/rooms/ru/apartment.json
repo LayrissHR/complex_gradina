@@ -1,0 +1,10 @@
+{
+  "title": "Апартаменты (до 4 человек)",
+  "description": "Мы предлагаем 6 апартаментов, каждый из которых имеет панорамный вид на море. Включают отдельную спальню, гостиную и террасу. Оснащены кондиционером, холодильником, телевизором, собственной ванной комнатой и WiFi. Гости апартаментов пользуются бесплатной частной парковкой внутри комплекса.",
+  "capacity": 4,
+  "price": 80,
+  "price_june_sept": 80,
+  "price_july_aug": 90,
+  "image": "/images/Apartment_1.JPG",
+  "gallery": ["/images/Apartment_1.JPG", "/images/Apartment_3.jpg", "/images/Apartment_4.jpg", "/images/Bathroom_3.jpg", "/images/terrace_apartment_1.jpg"]
+}
