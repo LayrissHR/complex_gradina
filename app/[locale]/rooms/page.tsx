@@ -3,6 +3,26 @@ import Navbar from "@/components/navbar";
 import RoomsSection from "@/components/rooms-section";
 import { getDictionary, Locale } from "@/lib/get-dictionary";
 import { getCollection, RoomData } from "@/lib/get-content";
+import type { Metadata } from "next";
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const { locale } = params;
+  
+  const title = locale === "bg" ? "Стаи и апартаменти" : locale === "ru" ? "Номера и апартаменты" : "Rooms and Apartments";
+  const description = locale === "bg" 
+      ? "Разгледайте нашите уютни стаи и апартаменти в Черноморец. Всяко помещение е оборудвано с климатик, WiFi и предлага всичко необходимо за Вашия престой."
+      : locale === "ru"
+      ? "Посмотрите наши уютные номера и апартаменты в Черноморце. Каждый номер оборудован кондиционером, WiFi и всем необходимым для вашего пребывания."
+      : "Explore our cozy rooms and apartments in Chernomorets. Each unit is equipped with air conditioning, WiFi, and everything needed for your stay.";
+
+  return {
+    title,
+    description,
+  };
+}
 
 export default async function RoomsPage(props: {
   params: Promise<{ locale: string }>;

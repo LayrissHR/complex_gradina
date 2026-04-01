@@ -1,5 +1,25 @@
 import { getCollection, RoomData } from "@/lib/get-content";
 import { getDictionary, Locale } from "@/lib/get-dictionary";
+import type { Metadata } from "next";
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const { locale } = params;
+  
+  const title = locale === "bg" ? "Цени за сезон 2026" : locale === "ru" ? "Цены на сезон 2026" : "Prices for 2026 Season";
+  const description = locale === "bg" 
+      ? "Вижте нашите актуални цени за предстоящия летен сезон 2026 в Черноморец. Прозрачно ценообразуване за стаи и апартаменти."
+      : locale === "ru"
+      ? "Посмотрите наши актуальные цены на предстоящий летний сезон 2026 в Черноморце. Прозрачное ценообразование на номера и апартаменты."
+      : "Check our current prices for the upcoming summer season 2026 in Chernomorets. Transparent pricing for rooms and apartments.";
+
+  return {
+    title,
+    description,
+  };
+}
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Table, Users, Check, Waves, Coffee, Car } from "lucide-react";

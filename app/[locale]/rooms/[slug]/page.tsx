@@ -1,5 +1,6 @@
 import { getDoc, getCollection, RoomData } from "@/lib/get-content";
 import { getDictionary, Locale } from "@/lib/get-dictionary";
+import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
@@ -19,6 +20,37 @@ export async function generateStaticParams() {
   }
 
   return params;
+}
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const { locale, slug } = params;
+  const room = await getDoc<RoomData>("rooms", locale as Locale, slug);
+
+  if (!room) {
+    return {
+      title: "Room Not Found",
+    };
+  }
+
+  return {
+    title: room.title,
+    description: room.description.substring(0, 160),
+    openGraph: {
+      title: room.title,
+      description: room.description.substring(0, 160),
+      images: [
+        {
+          url: room.image,
+          width: 1200,
+          height: 630,
+          alt: room.title,
+        },
+      ],
+    },
+  };
 }
 
 export default async function RoomPage(props: {
