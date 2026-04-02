@@ -1,8 +1,9 @@
 "use client";
 
-import { X, ZoomIn } from "lucide-react";
+import { ZoomIn } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Lightbox from "./ui/lightbox";
 
 interface GallerySectionProps {
   dict: {
@@ -152,33 +153,12 @@ export default function GallerySection({ dict }: GallerySectionProps) {
 
       {/* Lightbox */}
       {lightbox !== null && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setLightbox(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Lightbox"
-        >
-          <button
-            className="absolute top-4 right-4 text-white hover:text-[#05B2DC] transition-colors"
-            onClick={() => setLightbox(null)}
-            aria-label="Close"
-          >
-            <X className="w-8 h-8" />
-          </button>
-          <div
-            className="relative max-w-5xl max-h-[85vh] w-full h-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={photos[lightbox].src}
-              alt={photos[lightbox].alt}
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-          </div>
-        </div>
+        <Lightbox
+          images={photos.map((p) => p.src)}
+          currentIndex={lightbox}
+          onClose={() => setLightbox(null)}
+          onNavigate={(index) => setLightbox(index)}
+        />
       )}
     </section>
   );

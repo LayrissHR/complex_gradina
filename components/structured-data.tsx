@@ -1,5 +1,3 @@
-import { RoomData } from "@/lib/get-content";
-import { Locale } from "@/lib/get-dictionary";
 
 const baseUrl = "https://complex-gradina.com";
 
