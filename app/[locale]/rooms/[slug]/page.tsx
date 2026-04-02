@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, Users, Bath, Eye, Tv, Wind, Wifi, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
+import RoomGallery from "@/components/room-gallery";
 
 export async function generateStaticParams() {
   const locales = ["bg", "en", "ru"];
@@ -81,32 +82,11 @@ export default async function RoomPage(props: {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Image Gallery */}
-            <div className="space-y-4">
-              <div className="relative aspect-[3/2] rounded-3xl overflow-hidden shadow-xl">
-                <Image
-                  src={room.image}
-                  alt={room.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              
-              {room.gallery && room.gallery.length > 0 && (
-                <div className="grid grid-cols-3 gap-4">
-                  {room.gallery.map((img, idx) => (
-                    <div key={idx} className="relative aspect-square rounded-2xl overflow-hidden shadow-md">
-                      <Image
-                        src={img}
-                        alt={`${room.title} - ${idx + 1}`}
-                        fill
-                        className="object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            <RoomGallery 
+              mainImage={room.image} 
+              gallery={room.gallery} 
+              roomTitle={room.title}
+            />
 
             {/* Room Details */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-border">
