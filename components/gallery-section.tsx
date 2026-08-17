@@ -16,17 +16,17 @@ interface GallerySectionProps {
 const photos = [
   {
     src: "/images/cover.jpg",
-    alt: "Общ изглед на комплекс Градина",
+    alt: "Общ изглед на обекта в комплекс „Градина“",
     span: "col-span-2 row-span-2",
   },
   {
     src: "/images/pool.jpg",
-    alt: "Басейнът на комплекса",
+    alt: "Слънчевият двор на комплекса",
     span: "",
   },
   {
     src: "/images/Pool_with_outside_parking.jpg",
-    alt: "Басейн и паркинг пред хотела",
+    alt: "Зона пред входа и общият обект",
     span: "col-span-2",
   },
   {
@@ -61,12 +61,12 @@ const photos = [
   },
   {
     src: "/images/night.JPG",
-    alt: "Вечерен изглед на комплекса",
+    alt: "Вечерен изглед на обекта",
     span: "col-span-2",
   },
   {
     src: "/images/pool_2.jpg",
-    alt: "Зона за релакс около басейна",
+    alt: "Релакс зона в комплекса",
     span: "",
   },
   {

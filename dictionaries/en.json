@@ -1,9 +1,9 @@
 {
   "hero": {
     "location": "Chernomorets, Bulgaria",
-    "title_part1": "Complex \"Gradina\"",
-    "title_part2": "Chernomorets",
-    "subtitle": "Your seaside sanctuary — fresh air, crystal water and an unforgettable holiday!",
+    "title_part1": "Guest rooms",
+    "title_part2": "Gradina",
+    "subtitle": "Guest rooms Gradina, Chernomorets — fresh air, crystal-clear water, and a peaceful seaside stay!",
     "cta_phone": "Call us",
     "cta_messenger": "Messenger"
   },
@@ -16,10 +16,10 @@
   },
   "about": {
     "title": "About Us",
-    "heading": "Discover the beauty of the",
-    "accent": "Black Sea",
-    "p1": "Complex 'Gradina, Chernomorets' is a family gem located in the heart of the resort village, just a step away from the sandy beach. Our mission is to provide you with a peaceful and cozy environment for your seaside vacation.",
-    "p2": "The complex features an outdoor pool with sunbeds, a cozy indoor pool bar, and modernly furnished rooms and apartments. Here you will find everything you need – from air-conditioned rooms to a special touch for every guest.",
+    "heading": "Discover the calm of the",
+    "accent": "sea",
+    "p1": "We offer guest rooms and apartments in Gradina, just a step away from the sandy beach. Our aim is to provide a peaceful and cozy environment for your seaside stay.",
+    "p2": "We offer modernly furnished rooms and apartments in a calm and welcoming setting. Here you will find everything you need — from air-conditioned rooms to personal attention for every guest.",
     "cta": "Contact Us"
   },
   "amenities": {
@@ -27,12 +27,30 @@
     "heading": "Everything for the",
     "accent": "perfect holiday",
     "items": [
-      { "title": "Outdoor Pool", "desc": "Clean water and sun all day for our guests" },
-      { "title": "Indoor Pool Bar", "desc": "Cooling drinks and a cozy atmosphere" },
-      { "title": "Sea View", "desc": "Panoramic views (available in apartments only)" },
-      { "title": "Parking", "desc": "Private parking (for apartments) and free parking for rooms" },
-      { "title": "Sunbeds", "desc": "Free use of sunbeds around the pool" },
-      { "title": "Fully Equipped", "desc": "AC, Refrigerator, TV, and WiFi in every unit" }
+      {
+        "title": "Sea View",
+        "desc": "Peaceful surroundings and panoramic sea vistas"
+      },
+      {
+        "title": "Cozy Atmosphere",
+        "desc": "A quiet and relaxing place to unwind"
+      },
+      {
+        "title": "Sea View",
+        "desc": "Panoramic views (available in apartments only)"
+      },
+      {
+        "title": "Parking",
+        "desc": "Private parking (for apartments) and free parking for rooms"
+      },
+      {
+        "title": "Fully Equipped",
+        "desc": "AC, Refrigerator, TV, and WiFi in every unit"
+      },
+      {
+        "title": "Personal Service",
+        "desc": "Friendly care and attention for every guest"
+      }
     ]
   },
   "location": {
@@ -48,8 +66,8 @@
     "cta": "Open in Google Maps"
   },
   "footer": {
-    "about_title": "Gradina Chernomorets",
-    "about_text": "A charming hotel on the Bulgarian Black Sea coast. Experience peaceful moments, fresh sea air, and warm hospitality.",
+    "about_title": "Guest rooms Gradina",
+    "about_text": "Guest rooms Gradina, Chernomorets. Peaceful surroundings, sea air, and a comfortable stay.",
     "links_title": "Quick Links",
     "contact_title": "Contact",
     "rights": "All rights reserved."
@@ -57,7 +75,7 @@
   "gallery": {
     "title": "Photos",
     "heading": "Gallery",
-    "subheading": "Explore our hotel, rooms, and the beautiful sea nature around us."
+    "subheading": "Explore our rooms, apartments, and the beautiful sea nature around us."
   },
   "contact": {
     "title": "Contact",
@@ -80,8 +98,8 @@
     "author": "— Stefan Tsanev"
   },
   "seo": {
-    "title": "Complex Gradina | Hotel in Chernomorets",
-    "description": "Complex Gradina in Chernomorets — your place for a summer holiday. Cozy rooms, swimming pool, near the sea and a peaceful atmosphere. Book now!",
-    "keywords": "Chernomorets, summer holiday Bulgaria, hotel Chernomorets, Complex Gradina, rooms for rent, family hotel, hotel with pool"
+    "title": "Guest rooms Gradina | Chernomorets",
+    "description": "Guest rooms Gradina, Chernomorets — close to the sea, with a pool and a peaceful atmosphere. Book directly!",
+    "keywords": "Chernomorets, guest rooms Chernomorets, Gradina, rooms for rent, apartments for rent, sea holiday, pool, near the beach"
   }
 }

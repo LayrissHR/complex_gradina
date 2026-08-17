@@ -1,9 +1,9 @@
 "use client";
 
-import { Menu, Phone, X, Globe } from "lucide-react";
+import { Globe, Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useParams, usePathname } from "next/navigation";
 
 interface NavbarProps {
   locale: string;
@@ -50,21 +50,32 @@ export default function Navbar({ locale, dict }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#213764] shadow-lg" : "bg-[#213764]/80 backdrop-blur-md"
+        scrolled ? "bg-navy shadow-lg" : "bg-navy/80 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex flex-col leading-tight group">
+          <Link
+            href={`/${locale}`}
+            className="flex flex-col leading-tight group"
+          >
             <span
-              className="text-white text-xl md:text-2xl font-semibold tracking-wide group-hover:text-[#05B2DC] transition-colors duration-200"
+              className="text-white text-xl md:text-2xl font-semibold tracking-wide group-hover:text-ocean transition-colors duration-200"
               style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
             >
-              комплекс "Градина", Черноморец
+              {locale === "bg"
+                ? "Стаи за гости в комплекс „Градина“"
+                : locale === "ru"
+                  ? "Сдаются комнаты в Комплекс Градина"
+                  : "Rooms for rent in Complex Gradina"}
             </span>
-            <span className="text-[#05B2DC] text-xs tracking-[0.2em] uppercase">
-              {locale === "ru" ? "Семейный отель" : locale === "en" ? "Family Hotel" : "Семеен хотел"}
+            <span className="text-ocean text-xs tracking-[0.2em] uppercase">
+              {locale === "ru"
+                ? "Комнаты в аренду"
+                : locale === "en"
+                  ? "Rooms for Rent"
+                  : "Стаи за гости"}
             </span>
           </Link>
 
@@ -74,7 +85,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-white/80 hover:text-[#05B2DC] text-sm tracking-wide transition-colors duration-200 font-medium"
+                className="text-white/80 hover:text-ocean text-sm tracking-wide transition-colors duration-200 font-medium"
               >
                 {link.label}
               </Link>
@@ -88,7 +99,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
                   href={getLanguagePath(lang.code)}
                   className={`text-xs px-2 py-1 rounded transition-colors ${
                     locale === lang.code
-                      ? "bg-[#05B2DC] text-white"
+                      ? "bg-ocean text-white"
                       : "text-white/60 hover:text-white"
                   }`}
                 >
@@ -99,10 +110,14 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
             <a
               href="tel:+359888000000"
-              className="flex items-center gap-2 bg-[#F4A261] hover:bg-[#e8945a] text-white text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:shadow-lg"
+              className="flex items-center gap-2 bg-coral hover:bg-coral/90 text-white text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:shadow-lg"
             >
               <Phone className="w-4 h-4" />
-              {locale === "bg" ? "Обади се" : locale === "ru" ? "Позвонить" : "Call us"}
+              {locale === "bg"
+                ? "Обади се"
+                : locale === "ru"
+                  ? "Позвонить"
+                  : "Call us"}
             </a>
           </nav>
 
@@ -119,29 +134,27 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="md:hidden bg-[#213764] border-t border-white/10 px-4 pt-4 pb-6 flex flex-col gap-4">
+        <div className="md:hidden bg-navy border-t border-white/10 px-4 pt-4 pb-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-white/80 hover:text-[#05B2DC] text-base py-2 border-b border-white/10 transition-colors"
+              className="text-white/80 hover:text-ocean text-base py-2 border-b border-white/10 transition-colors"
               onClick={() => setOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          
+
           {/* Mobile Language Switcher */}
           <div className="flex items-center gap-4 py-2">
-            <Globe className="w-4 h-4 text-[#05B2DC]" />
+            <Globe className="w-4 h-4 text-ocean" />
             {languages.map((lang) => (
               <Link
                 key={lang.code}
                 href={getLanguagePath(lang.code)}
                 className={`text-sm px-3 py-1 rounded ${
-                  locale === lang.code
-                    ? "bg-[#05B2DC] text-white"
-                    : "text-white/60"
+                  locale === lang.code ? "bg-ocean text-white" : "text-white/60"
                 }`}
                 onClick={() => setOpen(false)}
               >
@@ -152,10 +165,14 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
           <a
             href="tel:+359888000000"
-            className="flex items-center justify-center gap-2 bg-[#F4A261] text-white text-sm font-semibold px-4 py-3 rounded-full mt-2"
+            className="flex items-center justify-center gap-2 bg-coral text-white text-sm font-semibold px-4 py-3 rounded-full mt-2"
           >
             <Phone className="w-4 h-4" />
-            {locale === "bg" ? "Обади се" : locale === "ru" ? "Позвонить" : "Call us"}
+            {locale === "bg"
+              ? "Обади се"
+              : locale === "ru"
+                ? "Позвонить"
+                : "Call us"}
           </a>
         </div>
       )}

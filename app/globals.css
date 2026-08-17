@@ -1,18 +1,18 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Hotel Brand Colors */
-  --ocean: #05B2DC;
+  /* Accommodation Brand Colors */
+  --ocean: #05b2dc;
   --navy: #213764;
-  --sand: #FAFAFB;
-  --blush: #F9DFFF;
-  --coral: #F4A261;
+  --sand: #fafafb;
+  --blush: #f9dfff;
+  --coral: #f4a261;
 
   /* Semantic Tokens */
-  --background: #FAFAFB;
+  --background: #fafafb;
   --foreground: #1a2a3a;
   --card: #ffffff;
   --card-foreground: #1a2a3a;
@@ -24,23 +24,23 @@
   --secondary-foreground: #213764;
   --muted: #f0f4f8;
   --muted-foreground: #5a7a9a;
-  --accent: #05B2DC;
+  --accent: #05b2dc;
   --accent-foreground: #ffffff;
-  --cta: #F4A261;
+  --cta: #f4a261;
   --cta-foreground: #ffffff;
-  --highlight: #F9DFFF;
+  --highlight: #f9dfff;
   --highlight-foreground: #213764;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: #e2eaf2;
   --input: #e2eaf2;
-  --ring: #05B2DC;
+  --ring: #05b2dc;
   --radius: 0.75rem;
 }
 
 @theme inline {
-  --font-sans: 'Cormorant Garamond', 'Georgia', serif;
-  --font-body: 'Inter', 'sans-serif';
+  --font-sans: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Inter", "sans-serif";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -64,10 +64,10 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-ocean: #05B2DC;
+  --color-ocean: #05b2dc;
   --color-navy: #213764;
-  --color-sand: #FAFAFB;
-  --color-coral: #F4A261;
+  --color-sand: #fafafb;
+  --color-coral: #f4a261;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -80,10 +80,15 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant Garamond", Georgia, serif;
   }
 }
 

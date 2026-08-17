@@ -16,11 +16,39 @@ interface AboutSectionProps {
   locale: string;
 }
 
-export default function AboutSection({ dict, rooms, locale }: AboutSectionProps) {
+export default function AboutSection({
+  dict,
+  rooms,
+  locale,
+}: AboutSectionProps) {
   const highlights = [
-    { icon: Waves, label: locale === "bg" ? "Външен басейн и бар до басейна" : locale === "ru" ? "Бассейн и Бар у бассейна" : "Outdoor Pool & Pool Bar" },
-    { icon: Sun, label: locale === "bg" ? "Гледка към морето (Апартаменти)" : locale === "ru" ? "Вид на море (Апартаменты)" : "Sea view (Apartments)" },
-    { icon: Wind, label: locale === "bg" ? "Свеж морски въздух" : locale === "ru" ? "Свежий морской воздух" : "Fresh sea air" },
+    {
+      icon: Waves,
+      label:
+        locale === "bg"
+          ? "Морска гледка (Апартаменти)"
+          : locale === "ru"
+            ? "Вид на море (Апартаменты)"
+            : "Sea view (Apartments)",
+    },
+    {
+      icon: Sun,
+      label:
+        locale === "bg"
+          ? "Спокойна атмосфера"
+          : locale === "ru"
+            ? "Спокойная атмосфера"
+            : "Calm atmosphere",
+    },
+    {
+      icon: Wind,
+      label:
+        locale === "bg"
+          ? "Свеж морски въздух"
+          : locale === "ru"
+            ? "Свежий морской воздух"
+            : "Fresh sea air",
+    },
   ];
 
   return (
@@ -72,7 +100,7 @@ export default function AboutSection({ dict, rooms, locale }: AboutSectionProps)
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/cover.jpg"
-                alt="Комплекс Градина"
+                alt="Стаи за гости в комплекс „Градина“"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

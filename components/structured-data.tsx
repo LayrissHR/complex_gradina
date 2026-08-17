@@ -1,50 +1,73 @@
-
 const baseUrl = "https://complex-gradina.com";
 
 interface StructuredDataProps {
-  type: "Hotel" | "BreadcrumbList";
+  type: "LodgingBusiness" | "BreadcrumbList";
   locale: string;
   data?: any;
 }
 
-export default function StructuredData({ type, locale, data }: StructuredDataProps) {
+export default function StructuredData({
+  type,
+  locale,
+  data,
+}: StructuredDataProps) {
   let schema: any = null;
 
-  if (type === "Hotel") {
+  if (type === "LodgingBusiness") {
     schema = {
       "@context": "https://schema.org",
-      "@type": "Hotel",
-      "name": locale === "bg" ? "Комплекс Градина" : "Complex Gradina",
-      "description": locale === "bg" 
-        ? "Очарователен семеен хотел в Черноморец, предлагащ уютни стаи и апартаменти само на крачка от плажа."
-        : "A charming family hotel in Chernomorets offering cozy rooms and apartments just a step from the beach.",
-      "image": `${baseUrl}/images/hero-bg.jpg`, // Example hero image
-      "address": {
+      "@type": "LodgingBusiness",
+      name:
+        locale === "bg"
+          ? "Стаи за гости в комплекс „Градина“"
+          : locale === "ru"
+            ? "Сдаются комнаты в «Градина»"
+            : "Guest rooms in Gradina",
+      description:
+        locale === "bg"
+          ? "Стаи и апартаменти под наем в Стаи за гости в комплекс „Градина“, гр. Черноморец, м. „Аклади“, само на крачка от плажа."
+          : locale === "ru"
+            ? "Комнаты и апартаменты в аренду в «Градина», Черноморец, всего в шаге от пляжа."
+            : "Guest rooms and apartments in Gradina, Chernomorets, just a step from the beach.",
+      image: `${baseUrl}/images/hero-bg.jpg`, // Example hero image
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "ул. 9-ти Септември 99",
-        "addressLocality": "Черноморец",
-        "addressRegion": "Бургас",
-        "postalCode": "8142",
-        "addressCountry": "BG"
+        streetAddress: "м. Аклади",
+        addressLocality: "Черноморец",
+        addressRegion: "Бургас",
+        postalCode: "8142",
+        addressCountry: "BG",
       },
-      "geo": {
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": 42.4461,
-        "longitude": 27.6394
+        latitude: 42.4461,
+        longitude: 27.6394,
       },
-      "url": `${baseUrl}/${locale}`,
-      "telephone": "+359889716096",
-      "priceRange": "$$",
-      "starRating": {
-        "@type": "Rating",
-        "ratingValue": "3"
-      },
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Swimming Pool", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true }
-      ]
+      url: `${baseUrl}/${locale}`,
+      telephone: "+359889716096",
+      priceRange: "$$",
+      amenityFeature: [
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Swimming Pool",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Free WiFi",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Air Conditioning",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Parking",
+          value: true,
+        },
+      ],
     };
   }
 
@@ -52,12 +75,12 @@ export default function StructuredData({ type, locale, data }: StructuredDataPro
     schema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": data.breadcrumbs.map((crumb: any, index: number) => ({
+      itemListElement: data.breadcrumbs.map((crumb: any, index: number) => ({
         "@type": "ListItem",
-        "position": index + 1,
-        "name": crumb.name,
-        "item": `${baseUrl}${crumb.path}`
-      }))
+        position: index + 1,
+        name: crumb.name,
+        item: `${baseUrl}${crumb.path}`,
+      })),
     };
   }
 

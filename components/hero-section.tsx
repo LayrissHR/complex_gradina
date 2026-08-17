@@ -54,7 +54,7 @@ export default function HeroSection({ dict }: HeroSectionProps) {
             {dict.location}
           </p>
           <h1
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-tight text-balance"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6rem] font-light text-white mb-6 leading-[0.9] text-balance"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
             {dict.title_part1}
@@ -63,7 +63,7 @@ export default function HeroSection({ dict }: HeroSectionProps) {
               {dict.title_part2}
             </span>
           </h1>
-          <p className="text-white text-base md:text-xl mb-10 leading-relaxed max-w-xl mx-auto text-pretty">
+          <p className="text-white text-sm sm:text-base md:text-lg mb-10 leading-relaxed max-w-2xl mx-auto text-pretty">
             {dict.subtitle}
           </p>
 
@@ -89,7 +89,7 @@ export default function HeroSection({ dict }: HeroSectionProps) {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 animate-bounce z-20">
         <span className="text-xs tracking-widest uppercase">Scroll</span>
         <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
           <path d="M8 12L2 6h12z" />

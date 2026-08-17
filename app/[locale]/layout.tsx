@@ -1,9 +1,9 @@
+import StructuredData from "@/components/structured-data";
+import { getDictionary, Locale } from "@/lib/get-dictionary";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "../globals.css";
-import { getDictionary, Locale } from "@/lib/get-dictionary";
-import StructuredData from "@/components/structured-data";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin", "cyrillic"],
@@ -32,8 +32,8 @@ export async function generateMetadata(props: {
 
   return {
     title: {
-        template: `%s | ${seo.title}`,
-        default: seo.title,
+      template: `%s | ${seo.title}`,
+      default: seo.title,
     },
     description: seo.description,
     keywords: seo.keywords,
@@ -56,9 +56,9 @@ export async function generateMetadata(props: {
       type: "website",
     },
     twitter: {
-        card: "summary_large_image",
-        title: seo.title,
-        description: seo.description,
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
     },
     robots: {
       index: true,
@@ -72,9 +72,9 @@ export async function generateMetadata(props: {
       },
     },
     icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon.ico",
-        apple: "/apple-icon.png",
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-icon.png",
     },
   };
 }
@@ -93,7 +93,7 @@ export default async function RootLayout(props: {
         className="antialiased"
         style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
       >
-        <StructuredData type="Hotel" locale={locale} />
+        <StructuredData type="LodgingBusiness" locale={locale} />
         {children}
         <Analytics />
       </body>
