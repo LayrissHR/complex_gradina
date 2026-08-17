@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { Facebook } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface FooterProps {
   dict: {
@@ -14,7 +16,11 @@ interface FooterProps {
 }
 
 export default function Footer({ dict, locale }: FooterProps) {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(2026);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="bg-navy text-white py-12 md:py-16">
@@ -159,17 +165,35 @@ export default function Footer({ dict, locale }: FooterProps) {
         {/* Divider */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>
-              &copy; {currentYear} {dict.about_title}. {dict.rights}
-            </p>
+            <div className="text-center md:text-left space-y-1">
+              <p>
+                &copy; {currentYear} {dict.about_title}. {dict.rights}
+              </p>
+              <p>
+                {locale === "bg"
+                  ? "Сайтът е изработен от "
+                  : locale === "ru"
+                    ? "Сайт разработан компанией "
+                    : "Website by "}
+                <a
+                  href="https://aslet.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-400 hover:text-purple-300 transition-colors"
+                >
+                  АСЛЕТ ООД
+                </a>
+              </p>
+            </div>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a
                 href="https://www.facebook.com/KompleksGradina/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
                 className="hover:text-ocean transition-colors"
               >
-                Facebook
+                <Facebook className="h-6 w-6 fill-current" aria-hidden="true" />
               </a>
             </div>
           </div>
