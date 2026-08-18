@@ -169,21 +169,6 @@ export default function Footer({ dict, locale }: FooterProps) {
               <p>
                 &copy; {currentYear} {dict.about_title}. {dict.rights}
               </p>
-              <p>
-                {locale === "bg"
-                  ? "Сайтът е изработен от "
-                  : locale === "ru"
-                    ? "Сайт разработан компанией "
-                    : "Website by "}
-                <a
-                  href="https://aslet.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-purple-300 transition-colors"
-                >
-                  АСЛЕТ ООД
-                </a>
-              </p>
             </div>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a
